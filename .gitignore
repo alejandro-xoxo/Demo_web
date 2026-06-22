@@ -1,0 +1,12 @@
+# Ignore all files by default
+*
+
+# Allow the main files at the root
+!index.html
+!styles.css
+!script.js
+!.gitignore
+
+# Allow the Outputs directory containing the three demos
+!Outputs/
+!Outputs/**

@@ -1,0 +1,164 @@
+<!-- (C) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Parrilla Urbana — Hamburguesas de Autor en Bucaramanga</title>
+    <meta name="description" content="Prueba las mejores hamburguesas artesanales de Bucaramanga en La Parrilla Urbana. Carne madurada a la brasa, pan brioche artesanal e ingredientes locales premium.">
+    <meta property="og:title" content="La Parrilla Urbana — Hamburguesas de Autor en Bucaramanga">
+    <meta property="og:description" content="Carne 100% madurada, pan artesanal y salsas hechas desde cero. Domicilios directos por WhatsApp.">
+    <meta property="og:image" content="img/burger-hero.jpg">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.documentElement.classList.add('js-active');
+    </script>
+</head>
+<body>
+
+    <!-- Header / Navegación -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo">LA PARRILLA</a>
+            <nav class="nav-menu">
+                <a href="#menu">La Carta</a>
+                <a href="#opiniones">Opiniones</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section (Bold Asymmetric Split) -->
+    <section class="hero-section">
+        <div class="hero-grid-container">
+            <div class="hero-text-side">
+                <span class="hero-eyebrow">Brasa, humo y paciencia</span>
+                <h1 class="hero-title">Materia prima y fuego real.</h1>
+                <p class="hero-subtitle">Hamburguesas de verdad en Bucaramanga. Carne 100% madurada a la brasa, pan brioche recién horneado y salsas artesanales.</p>
+                <div class="hero-cta-wrapper">
+                    <a href="https://wa.me/573000000000?text=Hola,%20me%20gustaría%20hacer%20un%20pedido%20en%20La%20Parrilla%20Urbana" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Hacer Pedido
+                    </a>
+                    <a href="#menu" class="btn btn-outline">Ver la Carta</a>
+                </div>
+            </div>
+            <div class="hero-image-side">
+                <div class="hero-img-frame">
+                    <img src="img/burger-hero.jpg" alt="Hamburguesa de autor a la parrilla en La Parrilla Urbana" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Menu Showcase (Asymmetric High-Taste Grid) -->
+    <section id="menu" class="menu-section">
+        <div class="section-container">
+            <h2 class="section-title">Nuestras Piezas</h2>
+            <p class="section-desc">Selección curada elaborada sin atajos.</p>
+            
+            <div class="bento-menu-grid">
+                <!-- Bento Cell 1: La Bestia (Spans 2 columns on desktop) -->
+                <div class="bento-cell bento-hero reveal-on-scroll">
+                    <div class="bento-cell-content">
+                        <span class="badge">El Ícono</span>
+                        <div class="bento-header">
+                            <h3>La Bestia</h3>
+                            <span class="price">$26.900</span>
+                        </div>
+                        <p class="details">Doble carne premium madurada (300g), doble cheddar fundido, tocino crujiente caramelizado en maple y cebolla crispy en pan brioche artesanal.</p>
+                        <a href="https://wa.me/573000000000?text=Hola,%20quiero%20pedir%20La%20Bestia" class="btn-text-link" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp &rarr;</a>
+                    </div>
+                    <div class="bento-cell-image">
+                        <img src="img/double-burger.jpg" alt="Hamburguesa Doble La Bestia en La Parrilla Urbana" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Bento Cell 2: La Clásica (Single cell) -->
+                <div class="bento-cell bento-standard reveal-on-scroll">
+                    <div class="bento-cell-image">
+                        <img src="img/burger-hero.jpg" alt="Hamburguesa Clásica en La Parrilla Urbana" loading="lazy">
+                    </div>
+                    <div class="bento-cell-content">
+                        <div class="bento-header">
+                            <h3>La Clásica</h3>
+                            <span class="price">$18.900</span>
+                        </div>
+                        <p class="details">Carne seleccionada (150g), queso cheddar, vegetales frescos locales y nuestra salsa ahumada secreta.</p>
+                        <a href="https://wa.me/573000000000?text=Hola,%20quiero%20pedir%20La%20Clásica" class="btn-text-link" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Bento Cell 3: Papas Trufa (Single cell) -->
+                <div class="bento-cell bento-standard reveal-on-scroll">
+                    <div class="bento-cell-image">
+                        <img src="img/truffle-fries.jpg" alt="Papas Rústicas con Aceite de Trufa en La Parrilla Urbana" loading="lazy">
+                    </div>
+                    <div class="bento-cell-content">
+                        <div class="bento-header">
+                            <h3>Rústicas & Trufa</h3>
+                            <span class="price">$12.900</span>
+                        </div>
+                        <p class="details">Papas cortadas a mano con piel, parmesano maduro rallado, perejil fresco y aceite de trufa blanca.</p>
+                        <a href="https://wa.me/573000000000?text=Hola,%20quiero%20pedir%20Papas%20Rústicas%20con%20Trufa" class="btn-text-link" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial Reviews (Typography First, No lazy cards) -->
+    <section id="opiniones" class="reviews-section">
+        <div class="section-container">
+            <h2 class="section-title">Críticas Foodies</h2>
+            <p class="section-desc">Lo que opinan quienes nos visitan.</p>
+            
+            <div class="reviews-editorial-layout">
+                <div class="review-editorial-item reveal-on-scroll">
+                    <p class="quote">“La Bestia justifica su nombre. El balance de la carne madurada y el dulzor sutil del maple en la tocineta es simplemente perfecto.”</p>
+                    <span class="author">— @BucaraFoodies (Blog de Autor)</span>
+                </div>
+                <div class="review-editorial-item reveal-on-scroll">
+                    <p class="quote">“Excelente empaque. Llega a casa caliente, con la carne jugosa en el término correcto y el pan brioche completamente intacto.”</p>
+                    <span class="author">— Andrés G. (Cliente Domicilio)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto Section -->
+    <footer id="contacto" class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>La Parrilla</h3>
+                <p class="footer-address">Calle 48 #28 - 15, Bucaramanga, Santander</p>
+                <p class="footer-phone">Pedidos: +57 300 000 0000</p>
+                <p class="footer-hours">Todos los días: 12:00 p.m. - 10:00 p.m.</p>
+            </div>
+            
+            <div class="footer-cta">
+                <h3>Recibe en Casa</h3>
+                <p>Ordena directamente a través de WhatsApp. Te enviamos el menú del día y coordinamos tu entrega de forma inmediata.</p>
+                <a href="https://wa.me/573000000000?text=Hola,%20me%20gustaría%20hacer%20un%20pedido%20en%20La%20Parrilla%20Urbana" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.59 1.978 14.12 .952 11.5 .952c-5.442 0-9.866 4.372-9.87 9.802 0 1.714.475 3.393 1.374 4.878l-.948 3.461 3.56-.933zM19.1 14.8c-.3-.15-1.74-.86-2.03-.96-.28-.1-.49-.15-.7.15-.2.3-.78.96-.96 1.16-.18.2-.36.23-.66.08-1.02-.5-1.8-1.07-2.5-2.28-.2-.3-.02-.47.13-.62.14-.14.3-.36.46-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.7-1.62-.95-2.24-.25-.61-.51-.53-.7-.54-.17-.01-.38-.01-.58-.01-.2 0-.53.07-.8.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.14 3.27 5.19 4.58.73.3 1.29.49 1.74.63.73.23 1.39.2 1.92.12.58-.08 1.74-.71 1.98-1.4.24-.7.24-1.3.17-1.4-.07-.1-.28-.2-.58-.35z"/>
+                    </svg>
+                    Pedir por WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 La Parrilla Urbana. Todos los derechos reservados. Marca (C)</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/573000000000?text=Hola,%20me%20gustaría%20hacer%20un%20pedido%20en%20La%20Parrilla%20Urbana" class="whatsapp-floating" target="_blank" rel="noopener noreferrer" aria-label="Hacer pedido por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.59 1.978 14.12 .952 11.5 .952c-5.442 0-9.866 4.372-9.87 9.802 0 1.714.475 3.393 1.374 4.878l-.948 3.461 3.56-.933zM19.1 14.8c-.3-.15-1.74-.86-2.03-.96-.28-.1-.49-.15-.7.15-.2.3-.78.96-.96 1.16-.18.2-.36.23-.66.08-1.02-.5-1.8-1.07-2.5-2.28-.2-.3-.02-.47.13-.62.14-.14.3-.36.46-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.7-1.62-.95-2.24-.25-.61-.51-.53-.7-.54-.17-.01-.38-.01-.58-.01-.2 0-.53.07-.8.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.14 3.27 5.19 4.58.73.3 1.29.49 1.74.63.73.23 1.39.2 1.92.12.58-.08 1.74-.71 1.98-1.4.24-.7.24-1.3.17-1.4-.07-.1-.28-.2-.58-.35z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

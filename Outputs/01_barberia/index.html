@@ -1,207 +1,434 @@
-<!-- (C) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Ilustre Barbershop — Barbería en Girón, Santander</title>
-    <meta name="description" content="Visita El Ilustre Barbershop en Girón, Santander. Cortes de precisión, afeitado tradicional a navaja con toalla caliente, acondicionamiento de barba y cervezas frías.">
-    <meta property="og:title" content="El Ilustre Barbershop — Estilo y Tradición en Girón">
-    <meta property="og:description" content="Dos años de cortes excepcionales, buenas risas, cervezas frías y atención de primera clase. Reserva por WhatsApp.">
-    <meta property="og:image" content="img/Imagen pegada (2).png">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        document.documentElement.classList.add('js-active');
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Ilustre Barbershop — Barbería en Girón, Santander</title>
+  <meta name="description" content="Visita El Ilustre Barbershop en Girón. Cortes de precisión, afeitado tradicional a navaja, ritual de toalla caliente y cervezas frías." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#080b09" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="El Ilustre Barbershop — Barbería en Girón, Santander" />
+  <meta property="og:description" content="Visita El Ilustre Barbershop en Girón. Cortes de precisión, afeitado tradicional a navaja, ritual de toalla caliente y cervezas frías." />
+  <meta property="og:image" content="img/Imagen pegada (2).png" />
+  <meta property="og:locale" content="es_CO" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="El Ilustre Barbershop" />
+  <meta name="twitter:description" content="Cortes de precisión, afeitado tradicional a navaja y ritual de toalla caliente en Girón, Santander." />
+  <meta name="twitter:image" content="img/Imagen pegada (2).png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- Header / Navegación -->
-    <header class="main-header">
-        <div class="header-container">
-            <a href="#" class="logo">EL ILUSTRE</a>
-            <nav class="nav-menu">
-                <a href="#servicios">El Catálogo</a>
-                <a href="#galeria">El Oficio</a>
-                <a href="#testimonios">La Opinión</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-        </div>
-    </header>
+  <!-- Skip to content (accessibility) -->
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
-    <!-- Hero Section (Editorial Poster Layout: Text Left, Video Poster Right) -->
-    <section class="hero-section">
-        <div class="hero-grid-container">
-            <div class="hero-text-side">
-                <div class="rating-badge">★ 5.0 (5 opiniones en Google)</div>
-                <h1 class="hero-title">Estilo, tradición y carácter.</h1>
-                <p class="hero-subtitle">Dos años de cortes excepcionales, risas y precisión absoluta en Girón. Aquí el estilo no se negocia.</p>
-                <div class="hero-cta-wrapper">
-                    <a href="https://wa.me/573193517191?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20en%20El%20Ilustre%20Barbershop" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                        Agendar Cita
-                    </a>
-                    <a href="#servicios" class="btn btn-outline">Ver Catálogo</a>
-                </div>
-            </div>
-            <div class="hero-video-side">
-                <div class="video-poster-frame">
-                    <video class="hero-video" autoplay muted loop playsinline>
-                        <source src="img/videoplayback.mp4" type="video/mp4">
-                        Tu navegador no soporta video.
-                    </video>
-                </div>
-            </div>
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════ -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#main-content" class="header-logo" aria-label="El Ilustre Barbershop — inicio">
+        <span class="logo-text">EL ILUSTRE</span>
+        <span class="logo-sub">BARBERSHOP</span>
+      </a>
+
+      <nav class="header-nav" aria-label="Navegación principal">
+        <ul class="nav-list" role="list">
+          <li><a href="#servicios" class="nav-link">El Catálogo</a></li>
+          <li><a href="#galeria" class="nav-link">El Oficio</a></li>
+          <li><a href="#testimonios" class="nav-link">La Opinión</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a
+        href="https://wa.me/573193517191?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20El%20Ilustre%20Barbershop"
+        class="header-cta"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Reservar cita por WhatsApp"
+      >
+        Reservar
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" aria-hidden="true">
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="#servicios" class="mobile-nav-link">El Catálogo</a></li>
+        <li><a href="#galeria" class="mobile-nav-link">El Oficio</a></li>
+        <li><a href="#testimonios" class="mobile-nav-link">La Opinión</a></li>
+        <li><a href="#contacto" class="mobile-nav-link">Contacto</a></li>
+        <li>
+          <a
+            href="https://wa.me/573193517191?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20El%20Ilustre%20Barbershop"
+            class="mobile-nav-link mobile-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Reservar por WhatsApp
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN
+  ═══════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ─── HERO ─────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-grid">
+
+        <!-- Left: text -->
+        <div class="hero-text">
+          <div class="hero-badge reveal-badge" aria-label="Calificación 5 estrellas en Google">
+            <span class="badge-stars" aria-hidden="true">★★★★★</span>
+            <span class="badge-score">5.0</span>
+            <span class="badge-divider" aria-hidden="true">·</span>
+            <span class="badge-label">5 opiniones Google</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-heading">
+            Estilo,<br>tradición<br>y carácter.
+          </h1>
+
+          <p class="hero-subtitle reveal-on-scroll">
+            Barbería de oficio en el corazón de Girón, Santander.<br>
+            Donde cada corte cuenta una historia.
+          </p>
+
+          <div class="hero-actions reveal-on-scroll">
+            <a
+              href="https://wa.me/573193517191?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20El%20Ilustre%20Barbershop"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="hero-cta-primary"
+            >
+              Agendar cita
+            </a>
+            <a href="#servicios" class="btn btn-ghost" id="hero-cta-secondary">
+              Ver catálogo
+            </a>
+          </div>
+
+          <div class="hero-meta reveal-on-scroll">
+            <p class="hero-meta-item">
+              <span class="hero-meta-icon" aria-hidden="true">◷</span>
+              Lun–Dom · 10am–9pm
+            </p>
+            <p class="hero-meta-item">
+              <span class="hero-meta-icon" aria-hidden="true">◈</span>
+              Girón, Santander
+            </p>
+          </div>
         </div>
+
+        <!-- Right: video portal -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="video-portal-frame">
+            <div class="video-portal" id="video-portal">
+              <video
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+              >
+                <source src="img/videoplayback.mp4" type="video/mp4" />
+              </video>
+              <div class="video-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="portal-border" aria-hidden="true"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="hero-scroll-cue" aria-hidden="true">
+        <span class="scroll-line"></span>
+        <span class="scroll-text">Scroll</span>
+      </div>
     </section>
 
-    <!-- Servicios Section (Minimalist Apothecary Ledger Layout) -->
-    <section id="servicios" class="services-section">
-        <div class="section-container">
-            <div class="services-grid-layout">
-                <div class="services-intro-col">
-                    <h2 class="section-title-left">El Catálogo</h2>
-                    <p class="services-desc-left">Cuidado clásico y moderno para el caballero ilustre. Todos los servicios incluyen perfilado al detalle y atención de primera.</p>
-                </div>
-                <div class="services-ledger-col">
-                    <!-- Servicio I -->
-                    <div class="ledger-item reveal-on-scroll">
-                        <div class="ledger-header">
-                            <span class="ledger-title">Corte & Asesoría de Estilo</span>
-                            <span class="ledger-leader"></span>
-                            <span class="ledger-price">$20.000</span>
-                        </div>
-                        <p class="ledger-details">Lavado premium, asesoramiento personalizado según tu rostro, corte a tijera o máquina y peinado con pomadas de alta gama.</p>
-                    </div>
-                    
-                    <!-- Servicio II -->
-                    <div class="ledger-item reveal-on-scroll">
-                        <div class="ledger-header">
-                            <span class="ledger-title">Ritual de Barba (Toalla Caliente)</span>
-                            <span class="ledger-leader"></span>
-                            <span class="ledger-price">$18.000</span>
-                        </div>
-                        <p class="ledger-details">Perfilado detallado a navaja, ritual de toalla caliente para abrir poros, afeitado tradicional e hidratación profunda con aceites.</p>
-                    </div>
+    <!-- ─── SERVICES ─────────────────────────── -->
+    <section class="services" id="servicios" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="services-inner">
 
-                    <!-- Servicio III -->
-                    <div class="ledger-item reveal-on-scroll">
-                        <div class="ledger-header">
-                            <span class="ledger-title">Rasurado de Cabeza Tradicional</span>
-                            <span class="ledger-leader"></span>
-                            <span class="ledger-price">$15.000</span>
-                        </div>
-                        <p class="ledger-details">Rasurado completo al ras con navaja clásica y tratamiento post-afeitado para hidratar y proteger el cuero cabelludo.</p>
-                    </div>
-                    
-                    <!-- Servicio IV -->
-                    <div class="ledger-item reveal-on-scroll">
-                        <div class="ledger-header">
-                            <span class="ledger-title">Tinte & Camuflaje de Canas</span>
-                            <span class="ledger-leader"></span>
-                            <span class="ledger-price">$25.000</span>
-                        </div>
-                        <p class="ledger-details">Pigmentación profesional del cabello o barba con productos especiales que proporcionan un aspecto natural y duradero.</p>
-                    </div>
+          <!-- Left: intro -->
+          <div class="services-intro-col">
+            <span class="eyebrow reveal-on-scroll">El Catálogo</span>
+            <h2 class="section-title reveal-on-scroll" id="services-heading">
+              El arte<br>del buen<br>arreglo.
+            </h2>
+            <p class="section-body reveal-on-scroll">
+              Cada servicio es ejecutado con instrumentos de precisión, productos de primera calidad y la técnica heredada de una larga tradición barbera.
+            </p>
+            <a
+              href="https://wa.me/573193517191?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20El%20Ilustre%20Barbershop"
+              class="btn btn-primary reveal-on-scroll"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="services-cta"
+            >
+              Reservar turno
+            </a>
+          </div>
 
-                    <!-- Servicio V -->
-                    <div class="ledger-item reveal-on-scroll">
-                        <div class="ledger-header">
-                            <span class="ledger-title">Combo Experiencia Ilustre</span>
-                            <span class="ledger-leader"></span>
-                            <span class="ledger-price">$35.000</span>
-                        </div>
-                        <p class="ledger-details">Corte de Estilo + Ritual de Barba con Toalla Caliente + Exfoliación facial express. Acompañado de una cerveza fría de cortesía.</p>
-                    </div>
-                </div>
-            </div>
+          <!-- Right: ledger -->
+          <div class="services-ledger-col" role="list" aria-label="Lista de servicios y precios">
+
+            <article class="ledger-item reveal-on-scroll" role="listitem" style="--ri:0">
+              <div class="ledger-number" aria-hidden="true">01</div>
+              <div class="ledger-content">
+                <h3 class="ledger-title">Corte &amp; Asesoría</h3>
+                <p class="ledger-desc">Corte a tijera o máquina con consulta de estilo personalizada.</p>
+              </div>
+              <span class="ledger-leader" aria-hidden="true"></span>
+              <span class="ledger-price" aria-label="Precio: 20.000 pesos">$20.000</span>
+            </article>
+
+            <article class="ledger-item reveal-on-scroll" role="listitem" style="--ri:1">
+              <div class="ledger-number" aria-hidden="true">02</div>
+              <div class="ledger-content">
+                <h3 class="ledger-title">Ritual de Barba</h3>
+                <p class="ledger-desc">Diseño, perfilado y toalla caliente para un acabado impecable.</p>
+              </div>
+              <span class="ledger-leader" aria-hidden="true"></span>
+              <span class="ledger-price" aria-label="Precio: 18.000 pesos">$18.000</span>
+            </article>
+
+            <article class="ledger-item reveal-on-scroll" role="listitem" style="--ri:2">
+              <div class="ledger-number" aria-hidden="true">03</div>
+              <div class="ledger-content">
+                <h3 class="ledger-title">Rasurado Cabeza</h3>
+                <p class="ledger-desc">Rasurado al ras con navaja y tratamiento hidratante post-afeitado.</p>
+              </div>
+              <span class="ledger-leader" aria-hidden="true"></span>
+              <span class="ledger-price" aria-label="Precio: 15.000 pesos">$15.000</span>
+            </article>
+
+            <article class="ledger-item reveal-on-scroll" role="listitem" style="--ri:3">
+              <div class="ledger-number" aria-hidden="true">04</div>
+              <div class="ledger-content">
+                <h3 class="ledger-title">Tinte &amp; Camuflaje</h3>
+                <p class="ledger-desc">Coloración selectiva para un look renovado y natural.</p>
+              </div>
+              <span class="ledger-leader" aria-hidden="true"></span>
+              <span class="ledger-price" aria-label="Precio: 25.000 pesos">$25.000</span>
+            </article>
+
+            <article class="ledger-item ledger-featured reveal-on-scroll" role="listitem" style="--ri:4">
+              <div class="ledger-number" aria-hidden="true">05</div>
+              <div class="ledger-content">
+                <h3 class="ledger-title">Combo Ilustre</h3>
+                <p class="ledger-desc">Corte + Ritual de Barba + Toalla caliente. La experiencia completa.</p>
+              </div>
+              <span class="ledger-leader" aria-hidden="true"></span>
+              <span class="ledger-price ledger-price-featured" aria-label="Precio: 35.000 pesos">$35.000</span>
+            </article>
+
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Galería Section (Asymmetric Photo Showcase with Styled Frames) -->
-    <section id="galeria" class="gallery-section">
-        <div class="section-container">
-            <h2 class="section-title">El Oficio</h2>
-            <p class="section-desc">Detalle y técnica en tiempo real.</p>
-            
-            <div class="gallery-asymmetric-layout">
-                <div class="gallery-block block-left reveal-on-scroll">
-                    <div class="img-frame-wrapper">
-                        <img src="img/Imagen pegada.png" alt="Corte moderno degradado con diseño de líneas en El Ilustre Barbershop" loading="lazy">
-                    </div>
-                    <div class="block-caption">
-                        <span>Líneas & Degradados</span>
-                        <p>Fades pulidos con diseños geométricos hechos a navaja por nuestros barberos.</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-block block-right reveal-on-scroll">
-                    <div class="img-frame-wrapper">
-                        <img src="img/Imagen pegada (2).png" alt="Interior y estación de barbero en El Ilustre Barbershop de Girón" loading="lazy">
-                    </div>
-                    <div class="block-caption">
-                        <span>El Templo</span>
-                        <p>Nuestras estaciones de trabajo preparadas para tu total comodidad y descanso.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- ─── GALLERY ───────────────────────────── -->
+    <section class="gallery" id="galeria" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="gallery-header reveal-on-scroll">
+          <span class="eyebrow">El Oficio</span>
+          <h2 class="section-title" id="gallery-heading">
+            Artesanía<br>en cada detalle.
+          </h2>
         </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-block gallery-block-left reveal-on-scroll">
+            <div class="gallery-img-wrap" data-parallax>
+              <img
+                src="img/Imagen pegada.png"
+                alt="Barbero trabajando con precisión en El Ilustre Barbershop"
+                class="gallery-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="gallery-caption">
+              <span class="gallery-caption-num" aria-hidden="true">— 01</span>
+              La precisión como filosofía
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-block gallery-block-right reveal-on-scroll">
+            <div class="gallery-img-wrap" data-parallax>
+              <img
+                src="img/Imagen pegada (2).png"
+                alt="Resultado final de un corte de barbería en El Ilustre"
+                class="gallery-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="gallery-caption">
+              <span class="gallery-caption-num" aria-hidden="true">— 02</span>
+              El resultado habla solo
+            </figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
 
-    <!-- Testimonios Section (Minimalist Editorial Quotes) -->
-    <section id="testimonios" class="testimonials-section">
-        <div class="section-container">
-            <h2 class="section-title">La Opinión</h2>
-            <p class="section-desc">Testimonios de quienes confían en nosotros.</p>
-            
-            <div class="testimonials-editorial-layout">
-                <div class="testimonial-editorial-item reveal-on-scroll">
-                    <span class="quote-mark">“</span>
-                    <p class="quote-text">El mejor lugar en Girón para cortarse el pelo y arreglar la barba. El ritual de la toalla caliente es inigualable y la atención al detalle es increíble. Te reciben siempre con una buena fría.</p>
-                    <cite class="quote-author">— Diego R. (Cliente hace 2 años)</cite>
-                </div>
-                <div class="testimonial-editorial-item reveal-on-scroll">
-                    <span class="quote-mark">“</span>
-                    <p class="quote-text">La precisión que manejan es impresionante. Fui por una afeitada clásica con navaja y salí muy satisfied. 100% recomendado por su profesionalismo y buen ambiente.</p>
-                    <cite class="quote-author">— Juan S. (Cliente Google)</cite>
-                </div>
-            </div>
+    <!-- ─── TESTIMONIALS ─────────────────────── -->
+    <section class="testimonials" id="testimonios" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="testimonials-header reveal-on-scroll">
+          <span class="eyebrow">La Opinión</span>
+          <h2 class="section-title" id="testimonials-heading">
+            Lo que<br>dicen ellos.
+          </h2>
         </div>
+
+        <div class="testimonials-grid">
+
+          <blockquote class="testimonial-card reveal-on-scroll" style="--ti:0">
+            <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+            <p class="testimonial-text">
+              El mejor corte que me han hecho en años. La atención es impecable, el ambiente es único y la cerveza mientras esperas… eso no tiene precio. Ya no voy a ningún otro lado.
+            </p>
+            <footer class="testimonial-footer">
+              <cite class="testimonial-author">— Carlos Mauricio R.</cite>
+              <div class="testimonial-stars" aria-label="5 estrellas">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card reveal-on-scroll" style="--ti:1">
+            <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+            <p class="testimonial-text">
+              El Combo Ilustre es una experiencia de otra categoría. El ritual de barba con toalla caliente te deja como nuevo. Girón tiene un tesoro en este lugar.
+            </p>
+            <footer class="testimonial-footer">
+              <cite class="testimonial-author">— Andrés Felipe M.</cite>
+              <div class="testimonial-stars" aria-label="5 estrellas">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+            </footer>
+          </blockquote>
+
+        </div>
+
+        <!-- Rating summary -->
+        <div class="rating-summary reveal-on-scroll" aria-label="Calificación promedio: 5.0 de 5 en Google">
+          <div class="rating-score">5.0</div>
+          <div class="rating-details">
+            <div class="rating-stars" aria-hidden="true">★★★★★</div>
+            <p class="rating-label">5 reseñas en Google</p>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- Footer / Contacto Section -->
-    <footer id="contacto" class="main-footer">
-        <div class="footer-container">
-            <div class="footer-info">
-                <h3>El Ilustre</h3>
-                <p class="footer-address">Cra. 23 #39 - 36, Girón, Santander</p>
-                <p class="footer-phone">WhatsApp: +57 319 351 7191</p>
-                <p class="footer-hours">Lunes a Domingo: 10:00 a.m. - 9:00 p.m.</p>
-            </div>
-            
-            <div class="footer-cta">
-                <h3>Reserva tu turno</h3>
-                <p>Haz clic abajo para chatear con nosotros en WhatsApp. Coordinamos tu cita en menos de un minuto.</p>
-                <a href="https://wa.me/573193517191?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20en%20El%20Ilustre%20Barbershop" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.59 1.978 14.12 .952 11.5 .952c-5.442 0-9.866 4.372-9.87 9.802 0 1.714.475 3.393 1.374 4.878l-.948 3.461 3.56-.933zM19.1 14.8c-.3-.15-1.74-.86-2.03-.96-.28-.1-.49-.15-.7.15-.2.3-.78.96-.96 1.16-.18.2-.36.23-.66.08-1.02-.5-1.8-1.07-2.5-2.28-.2-.3-.02-.47.13-.62.14-.14.3-.36.46-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.7-1.62-.95-2.24-.25-.61-.51-.53-.7-.54-.17-.01-.38-.01-.58-.01-.2 0-.53.07-.8.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.14 3.27 5.19 4.58.73.3 1.29.49 1.74.63.73.23 1.39.2 1.92.12.58-.08 1.74-.71 1.98-1.4.24-.7.24-1.3.17-1.4-.07-.1-.28-.2-.58-.35z"/>
-                    </svg>
-                    Pedir Cita (WhatsApp)
-                </a>
-            </div>
+    <!-- ─── FOOTER / CONTACT ─────────────────── -->
+    <footer class="site-footer" id="contacto" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+
+          <!-- Brand col -->
+          <div class="footer-brand">
+            <p class="footer-logo-text">EL ILUSTRE</p>
+            <p class="footer-logo-sub">BARBERSHOP</p>
+            <p class="footer-tagline">Estilo, tradición y carácter.</p>
+
+            <address class="footer-address">
+              <p class="footer-address-line">
+                <span class="footer-icon" aria-hidden="true">◈</span>
+                Girón, Santander, Colombia
+              </p>
+              <p class="footer-address-line">
+                <span class="footer-icon" aria-hidden="true">◷</span>
+                Lun–Dom · 10:00 am – 9:00 pm
+              </p>
+              <p class="footer-address-line">
+                <span class="footer-icon" aria-hidden="true">✆</span>
+                <a href="tel:+573193517191" class="footer-phone">+57 319 351 7191</a>
+              </p>
+            </address>
+          </div>
+
+          <!-- CTA col -->
+          <div class="footer-cta-col">
+            <h2 class="footer-cta-heading">Reserva<br>tu turno.</h2>
+            <p class="footer-cta-body">
+              Escríbenos por WhatsApp y agenda tu cita en minutos. Sin filas, sin esperas innecesarias.
+            </p>
+            <a
+              href="https://wa.me/573193517191?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20El%20Ilustre%20Barbershop"
+              class="btn btn-whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="footer-whatsapp-btn"
+              aria-label="Reservar cita por WhatsApp"
+            >
+              <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" width="22" height="22">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Escribir por WhatsApp
+            </a>
+          </div>
+
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 El Ilustre Barbershop. Todos los derechos reservados. Marca (C)</p>
+          <p class="footer-copy">&copy; <span id="footer-year"></span> El Ilustre Barbershop · Todos los derechos reservados.</p>
+          <p class="footer-made">Hecho con dedicación en Girón, Santander</p>
         </div>
+      </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/573193517191?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20en%20El%20Ilustre%20Barbershop" class="whatsapp-floating" target="_blank" rel="noopener noreferrer" aria-label="Agendar por WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.59 1.978 14.12 .952 11.5 .952c-5.442 0-9.866 4.372-9.87 9.802 0 1.714.475 3.393 1.374 4.878l-.948 3.461 3.56-.933zM19.1 14.8c-.3-.15-1.74-.86-2.03-.96-.28-.1-.49-.15-.7.15-.2.3-.78.96-.96 1.16-.18.2-.36.23-.66.08-1.02-.5-1.8-1.07-2.5-2.28-.2-.3-.02-.47.13-.62.14-.14.3-.36.46-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.7-1.62-.95-2.24-.25-.62-.51-.53-.7-.54-.17-.01-.38-.01-.58-.01-.2 0-.53.07-.8.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.14 3.27 5.19 4.58.73.3 1.29.49 1.74.63.73.23 1.39.2 1.92.12.58-.08 1.74-.71 1.98-1.4.24-.7.24-1.3.17-1.4-.07-.1-.28-.2-.58-.35z"/>
-        </svg>
-    </a>
+  </main><!-- end #main-content -->
 
-    <script src="script.js"></script>
+  <!-- ─── FLOATING WHATSAPP ─────────────────── -->
+  <a
+    href="https://wa.me/573193517191?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20El%20Ilustre%20Barbershop"
+    class="fab-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    id="fab-whatsapp"
+    aria-label="Abrir WhatsApp para reservar cita"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="fab-tooltip">¡Reserva ahora!</span>
+  </a>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

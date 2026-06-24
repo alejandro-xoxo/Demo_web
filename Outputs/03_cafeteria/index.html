@@ -1,218 +1,473 @@
-<!-- (C) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Origen Café — Cafetería de Especialidad en Bucaramanga</title>
-    <meta name="description" content="Origen Café en Bucaramanga. Granos de especialidad seleccionados, tostados en casa. Cafés filtrados (V60, Chemex), espresso y repostería artesanal.">
-    <meta property="og:title" content="Origen Café — Cafetería de Especialidad">
-    <meta property="og:description" content="Tu pausa perfecta. Café de origen seleccionado tostado en casa. Visítanos hoy mismo.">
-    <meta property="og:image" content="img/coffee-pour.jpg">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        document.documentElement.classList.add('js-active');
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Origen Café — Cafetería de Especialidad en Bucaramanga</title>
+  <meta name="description" content="Granos de especialidad seleccionados, tostados en casa semanalmente. Cafés filtrados (V60, Chemex), espresso y repostería artesanal." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Origen Café — Cafetería de Especialidad en Bucaramanga" />
+  <meta property="og:description" content="Granos de especialidad seleccionados, tostados en casa semanalmente. Cafés filtrados (V60, Chemex), espresso y repostería artesanal." />
+  <meta property="og:image" content="img/coffee-pour.jpg" />
+  <meta property="og:locale" content="es_CO" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Origen Café — Cafetería de Especialidad en Bucaramanga" />
+  <meta name="twitter:description" content="Granos de especialidad seleccionados, tostados en casa semanalmente." />
+  <meta name="twitter:image" content="img/coffee-pour.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- Header / Navegación -->
-    <header class="main-header">
-        <div class="header-container">
-            <a href="#" class="logo">origen.</a>
-            <nav class="nav-menu">
-                <a href="#historia">Historia</a>
-                <a href="#menu">La Carta</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-        </div>
-    </header>
+  <!-- ============================================================
+       HEADER — Fixed, transparent → blur on scroll
+  ============================================================ -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner container">
+      <a href="#" class="logo" aria-label="Origen Café — ir al inicio">origen.</a>
 
-    <!-- Hero Section (Editorial Cover Layout) -->
-    <section class="hero-section">
-        <div class="hero-cover-container">
-            <div class="hero-text-content">
-                <span class="hero-eyebrow">Tostadores Locales</span>
-                <h1 class="hero-title">Café de especialidad tostado en casa.</h1>
-                <p class="hero-subtitle">Granos únicos cultivados de manera sostenible por familias caficultoras en Santander, tostados semanalmente en pequeños lotes para garantizar frescura absoluta.</p>
-                <div class="hero-cta-wrapper">
-                    <a href="#contacto" class="btn btn-primary">Visítanos</a>
-                    <a href="#menu" class="btn btn-text">Ver la Carta</a>
-                </div>
-            </div>
-            <div class="hero-media-wrapper">
-                <div class="panoramic-frame">
-                    <img src="img/coffee-pour.jpg" alt="Barista preparando café filtrado mediante método V60 en Origen Café" class="hero-img">
-                </div>
-            </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-list" role="list">
+          <li><a href="#historia" class="nav-link">Historia</a></li>
+          <li><a href="#menu" class="nav-link">La Carta</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO — Editorial cover
+    ============================================================ -->
+    <section class="hero" id="hero" aria-label="Sección de bienvenida">
+      <div class="hero-content container">
+        <div class="hero-text-block">
+          <span class="hero-eyebrow reveal-word">Tostadores Locales</span>
+          <h1 class="hero-title js-split-words">
+            Café de especialidad tostado en casa.
+          </h1>
+          <p class="hero-subtitle reveal-fade">
+            Seleccionamos los mejores microlotes de Santander y los tostamos semanalmente para garantizar frescura en cada taza.
+          </p>
+          <div class="hero-cta-group reveal-fade reveal-fade--delayed">
+            <a href="#menu" class="btn btn--primary" id="hero-cta-carta">Ver La Carta</a>
+            <a href="#historia" class="btn btn--ghost" id="hero-cta-historia">Nuestra Historia</a>
+          </div>
         </div>
+      </div>
+
+      <!-- Panoramic image frame -->
+      <div class="hero-image-frame container">
+        <div class="hero-image-wrapper">
+          <img
+            src="img/coffee-pour.jpg"
+            alt="Vertido preciso de café de especialidad en taza blanca, humo sutil ascendiendo"
+            class="hero-image"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <div class="hero-image-overlay" aria-hidden="true"></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Nuestra Historia Section (Asymmetric Story Grid) -->
-    <section id="historia" class="story-section">
-        <div class="section-container story-grid">
-            <div class="story-label-col">
-                <span class="vertical-title">La Cosecha</span>
+    <!-- ============================================================
+         HISTORIA — Story grid, 2 columns
+    ============================================================ -->
+    <section class="historia section" id="historia" aria-labelledby="historia-heading">
+      <div class="container">
+        <div class="historia-grid">
+
+          <!-- Left: rotated label -->
+          <div class="historia-label-col" aria-hidden="true">
+            <span class="rotated-label">La Cosecha</span>
+          </div>
+
+          <!-- Right: content -->
+          <div class="historia-content-col">
+            <div class="historia-tag reveal-on-scroll">Sobre nosotros</div>
+            <h2 class="section-heading reveal-on-scroll" id="historia-heading">
+              De la planta a tu taza, sin atajos.
+            </h2>
+            <p class="historia-body reveal-on-scroll">
+              Origen nació en 2018 con una obsesión sencilla: hacer que cada taza de café cuente una historia. Trabajamos directamente con caficultores de <strong>Mesa de los Santos</strong>, una de las regiones cafeteras más premiadas de Colombia, donde la altitud y el microclima crean perfiles de sabor únicos con notas de mandarina, panela y cacao.
+            </p>
+            <p class="historia-body reveal-on-scroll">
+              Nuestras alianzas con familias productoras de <strong>Pinchote</strong>, Santander, nos permiten ofrecer granos honey-process y lavados con trazabilidad total — del árbol a la tostadora, de la tostadora a tu mano. Sin intermediarios, sin atajos, sin compromisos en la calidad.
+            </p>
+
+            <!-- Decorative data chips -->
+            <div class="historia-stats reveal-on-scroll">
+              <div class="stat-chip">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Familias caficultoras</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-number">1.600m</span>
+                <span class="stat-label">Altitud promedio</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-number">7d</span>
+                <span class="stat-label">Frescura de tostión</span>
+              </div>
             </div>
-            <div class="story-content-col reveal-on-scroll">
-                <h2 class="story-title">De la planta a tu taza, sin atajos.</h2>
-                <p class="story-text">Nuestra historia comenzó en las montañas de Santander, buscando granos que contaran el relato de la tierra y del esfuerzo de quienes la labran. En Origen Café, trabajamos de la mano con caficultores locales de la Mesa de los Santos y Pinchote, comprando cosechas a precios justos.</p>
-                <p class="story-text">Creemos que el buen café es una ciencia y un arte. Cada lote que llega a nuestra cafetería pasa por un perfil de tueste diseñado específicamente para resaltar sus notas florales, frutales o achocolatadas innatas. No añadimos nada: es el sabor puro del origen.</p>
-            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Menú Section (Minimalist 3-Column Grid + Curated Product Promo) -->
-    <section id="menu" class="menu-section">
-        <div class="section-container">
-            <h2 class="section-title">El Menú</h2>
-            <p class="section-desc">Extracciones y repostería artesanal.</p>
-            
-            <div class="menu-grid">
-                <!-- Columna 1: Espresso & Leche -->
-                <div class="menu-category-col reveal-on-scroll">
-                    <h3>Espresso & Leche</h3>
-                    <div class="menu-ledger">
-                        <div class="menu-item">
-                            <div class="item-header">
-                                <span class="item-name">Espresso</span>
-                                <span class="item-price">$4.500</span>
-                            </div>
-                            <p class="item-desc">Clásico / Doble shot extraído a presión.</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-header">
-                                <span class="item-name">Americano</span>
-                                <span class="item-price">$5.000</span>
-                            </div>
-                            <p class="item-desc">Extracción suave con agua caliente filtrada.</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-header">
-                                <span class="item-name">Cappuccino</span>
-                                <span class="item-price">$7.000</span>
-                            </div>
-                            <p class="item-desc">Con leche cremosa texturizada al punto exacto.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- ============================================================
+         MENU — 3-column ledger grid
+    ============================================================ -->
+    <section class="menu-section section" id="menu" aria-labelledby="menu-heading">
+      <div class="container">
 
-                <!-- Columna 2: Métodos de Filtrado -->
-                <div class="menu-category-col reveal-on-scroll">
-                    <h3>Métodos de Filtrado</h3>
-                    <div class="menu-ledger">
-                        <div class="menu-item">
-                            <div class="item-header">
-                                <span class="item-name">V60</span>
-                                <span class="item-price">$8.500</span>
-                            </div>
-                            <p class="item-desc">Taza limpia, notas florales y acidez pronunciada.</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-header">
-                                <span class="item-name">Chemex</span>
-                                <span class="item-price">$9.500</span>
-                            </div>
-                            <p class="item-desc">Cuerpo medio y taza sumamente balanceada.</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-header">
-                                <span class="item-name">Prensa Francesa</span>
-                                <span class="item-price">$7.500</span>
-                            </div>
-                            <p class="item-desc">Cuerpo denso y aceites naturales acentuados.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Columna 3: Repostería de la Casa -->
-                <div class="menu-category-col reveal-on-scroll">
-                    <h3>Repostería</h3>
-                    <div class="menu-ledger">
-                        <div class="menu-item">
-                            <div class="item-header">
-                                <span class="item-name">Croissant Almendras</span>
-                                <span class="item-price">$8.000</span>
-                            </div>
-                            <p class="item-desc">Hojaldrado de mantequilla horneado cada mañana.</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-header">
-                                <span class="item-name">Tarta de Zanahoria</span>
-                                <span class="item-price">$9.500</span>
-                            </div>
-                            <p class="item-desc">Con un suave frosting de queso crema artesanal.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Showcase Banner (Curated Promo Box) -->
-            <div class="product-promo-box reveal-on-scroll">
-                <div class="product-promo-image">
-                    <img src="img/coffee-bag.jpg" alt="Bolsa de café en grano Forest Blend de Origen Café" loading="lazy">
-                </div>
-                <div class="product-promo-info">
-                    <span class="promo-tag">Llévalo a Casa</span>
-                    <h3>Forest Blend — Single Origin</h3>
-                    <p>Granos enteros tostados artesanalmente en pequeños lotes en nuestra cafetería. Notas intensas a chocolate amargo, frutos rojos y acidez cítrica media. Cultivado en Santander.</p>
-                    <div class="promo-footer">
-                        <span class="promo-price">$28.000 COP / 340g</span>
-                        <a href="https://wa.me/573000000000?text=Hola,%20me%20gustaría%20comprar%20una%20bolsa%20de%20café%20Forest%20Blend" class="btn btn-whatsapp-product" target="_blank" rel="noopener noreferrer">
-                            Encargar Café
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="menu-header reveal-on-scroll">
+          <div class="menu-tag">La Carta</div>
+          <h2 class="section-heading" id="menu-heading">
+            Lo que preparamos hoy.
+          </h2>
+          <p class="menu-subtitle">Productos de temporada · Ingredientes locales · Sin aditivos artificiales</p>
         </div>
+
+        <div class="menu-grid">
+
+          <!-- Column 1: Espresso & Leche -->
+          <div class="menu-col reveal-on-scroll" aria-labelledby="menu-col-1-heading">
+            <h3 class="menu-col-heading" id="menu-col-1-heading">Espresso &amp; Leche</h3>
+            <ul class="menu-list" role="list">
+              <li class="menu-item">
+                <span class="menu-item-name">Espresso</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$4.500</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Americano</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$5.000</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Cappuccino</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$7.000</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Cortado</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$6.000</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Latte</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$7.500</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Métodos de Filtrado -->
+          <div class="menu-col menu-col--featured reveal-on-scroll" aria-labelledby="menu-col-2-heading">
+            <h3 class="menu-col-heading" id="menu-col-2-heading">Métodos de Filtrado</h3>
+            <ul class="menu-list" role="list">
+              <li class="menu-item">
+                <span class="menu-item-name">V60</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$8.500</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Chemex</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$9.500</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Prensa Francesa</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$7.500</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Aeropress</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$8.000</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Cold Brew</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$9.000</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Repostería -->
+          <div class="menu-col reveal-on-scroll" aria-labelledby="menu-col-3-heading">
+            <h3 class="menu-col-heading" id="menu-col-3-heading">Repostería</h3>
+            <ul class="menu-list" role="list">
+              <li class="menu-item">
+                <span class="menu-item-name">Croissant Almendras</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$8.000</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Tarta Zanahoria</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$9.500</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Banana Bread</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$7.000</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Brownie Cacao</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$7.500</span>
+              </li>
+              <li class="menu-item">
+                <span class="menu-item-name">Cheesecake Maracuyá</span>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">$10.000</span>
+              </li>
+            </ul>
+          </div>
+
+        </div><!-- /.menu-grid -->
+      </div>
     </section>
 
-    <!-- Experience Quote Section (Cozy Centered Typographic Quote) -->
-    <section class="quote-section">
-        <div class="section-container">
-            <blockquote class="experience-quote reveal-on-scroll">
-                <p class="quote-text">“Origen es el templo del café en Bucaramanga. Su filtrado por V60 cambia de sabor a medida que se enfría, revelando notas frutales increíbles. El servicio y el conocimiento de los baristas es excepcional.”</p>
-                <cite class="quote-cite">Esteban L. — Entusiasta del Café</cite>
-            </blockquote>
+    <!-- ============================================================
+         PRODUCT PROMO — 2-col card with radar chart
+    ============================================================ -->
+    <section class="promo-section section" id="promo" aria-labelledby="promo-heading">
+      <div class="container">
+        <div class="promo-card reveal-on-scroll">
+
+          <!-- Image -->
+          <div class="promo-image-col">
+            <div class="promo-image-wrapper">
+              <img
+                src="img/coffee-bag.jpg"
+                alt="Bolsa kraft de Forest Blend Single Origin, 340g, etiqueta artesanal"
+                class="promo-image"
+                loading="lazy"
+              />
+              <div class="promo-badge">Single Origin</div>
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="promo-info-col">
+            <div class="promo-tag">Granos para casa</div>
+            <h2 class="promo-heading section-heading" id="promo-heading">
+              Forest Blend — Single Origin
+            </h2>
+            <p class="promo-description">
+              Microlote de Mesa de los Santos, proceso honey. Notas de durazno, miel de abeja y chocolate con leche. Ideal para métodos de filtrado o espresso suave.
+            </p>
+
+            <!-- Radar chart injected by JS -->
+            <div class="radar-chart-container" id="radar-chart" role="img" aria-label="Gráfico de radar con perfiles de sabor: acidez, dulzor, cuerpo, aroma y amargor del Forest Blend"></div>
+
+            <!-- Price & CTA -->
+            <div class="promo-price-row">
+              <div class="promo-price-block">
+                <span class="promo-price">$28.000 COP</span>
+                <span class="promo-weight">340 g · Tostión semanal</span>
+              </div>
+              <a
+                href="https://wa.me/573193517191?text=Hola,%20me%20gustar%C3%ADa%20hacer%20un%20pedido%20en%20Origen%20Caf%C3%A9"
+                class="btn btn--primary"
+                id="promo-cta-buy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Comprar Forest Blend por WhatsApp"
+              >
+                Pedir por WhatsApp
+              </a>
+            </div>
+
+            <!-- Tasting notes pills -->
+            <div class="tasting-notes">
+              <span class="note-pill">Durazno</span>
+              <span class="note-pill">Miel</span>
+              <span class="note-pill">Chocolate con leche</span>
+              <span class="note-pill">Honey Process</span>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer / Contacto Section -->
-    <footer id="contacto" class="main-footer">
-        <div class="footer-container">
-            <div class="footer-info">
-                <h3>Visítanos</h3>
-                <p class="footer-address">Carrera 36 #42-12, Bucaramanga, Santander</p>
-                <p class="footer-phone">WhatsApp: +57 300 000 0000</p>
-                <p class="footer-hours">Lunes a Sábado: 8:00 a.m. - 8:00 p.m. / Domingo: 9:00 a.m. - 6:00 p.m.</p>
+    <!-- ============================================================
+         QUOTE — Editorial blockquote
+    ============================================================ -->
+    <section class="quote-section section" aria-label="Testimonio de cliente">
+      <div class="container">
+        <div class="quote-inner reveal-on-scroll">
+          <div class="quote-deco" aria-hidden="true">"</div>
+          <blockquote class="editorial-quote" cite="#">
+            <p class="quote-text">
+              Origen es el templo del café en Bucaramanga. Su filtrado por V60 cambia de sabor a medida que se enfría — primero cítrico, luego dulce, siempre sorprendente.
+            </p>
+            <footer class="quote-footer">
+              <cite class="quote-author">— Esteban L.</cite>
+              <span class="quote-role">Catador aficionado · Bucaramanga</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER — Contact & map
+  ============================================================ -->
+  <footer class="site-footer" id="contacto" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Left: info -->
+        <div class="footer-info">
+          <a href="#" class="footer-logo" aria-label="Origen Café">origen.</a>
+          <h2 class="footer-heading">Visítanos</h2>
+
+          <address class="footer-address">
+            <div class="footer-address-item">
+              <svg class="footer-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21c-4.418 0-8-5.373-8-9a8 8 0 0 1 16 0c0 3.627-3.582 9-8 9z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <span>Carrera 36 #42-12, Bucaramanga, Santander</span>
             </div>
-            
-            <!-- Map Polaroid frame -->
-            <div class="footer-map-container">
-                <div class="map-polaroid-frame">
-                    <div class="map-mock-graphics">
-                        <span class="map-icon">📍</span>
-                        <p class="map-location-text">Cabecera, Bucaramanga</p>
-                    </div>
-                    <a href="https://maps.google.com/?q=Carrera+36+42-12,+Bucaramanga,+Santander" class="btn btn-outline-map" target="_blank" rel="noopener noreferrer">
-                        Abrir en Google Maps
-                    </a>
+            <div class="footer-address-item">
+              <svg class="footer-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.44 2 2 0 0 1 3.54 2h3.09a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.96-.97a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <a href="tel:+573193517191" class="footer-link">+57 319 351 7191</a>
+            </div>
+            <div class="footer-address-item">
+              <svg class="footer-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <div class="footer-hours">
+                <div><strong>Lun – Sab</strong> &nbsp;8:00 am – 8:00 pm</div>
+                <div><strong>Domingo</strong> &nbsp;&nbsp;9:00 am – 6:00 pm</div>
+              </div>
+            </div>
+          </address>
+
+          <div class="footer-social">
+            <a href="https://wa.me/573193517191?text=Hola,%20me%20gustar%C3%ADa%20hacer%20un%20pedido%20en%20Origen%20Caf%C3%A9" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Origen Café">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.128.558 4.124 1.532 5.854L.046 23.84l6.09-1.473A11.934 11.934 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 0 1-5.001-1.368l-.36-.214-3.716.898.947-3.62-.234-.373A9.802 9.802 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Instagram de Origen Café">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4.5"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: map polaroid -->
+        <div class="footer-map-col">
+          <div class="footer-map-polaroid">
+            <div class="footer-map-frame" role="img" aria-label="Mapa de ubicación de Origen Café en Bucaramanga">
+              <!-- Map placeholder with decorative elements -->
+              <div class="map-placeholder">
+                <div class="map-grid" aria-hidden="true">
+                  <div class="map-street map-street--h map-street--1"></div>
+                  <div class="map-street map-street--h map-street--2"></div>
+                  <div class="map-street map-street--h map-street--3"></div>
+                  <div class="map-street map-street--v map-street--4"></div>
+                  <div class="map-street map-street--v map-street--5"></div>
+                  <div class="map-street map-street--v map-street--6"></div>
                 </div>
+                <div class="map-pin" aria-hidden="true">
+                  <svg viewBox="0 0 24 32" fill="none">
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 7.77 12 20 12 20S24 19.77 24 12C24 5.373 18.627 0 12 0z" fill="#1f2d24"/>
+                    <circle cx="12" cy="12" r="5" fill="#fcfbfa"/>
+                  </svg>
+                </div>
+                <div class="map-label">Origen Café</div>
+              </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Origen Café. Todos los derechos reservados. Marca (C)</p>
-        </div>
-    </footer>
+            <div class="footer-map-caption">
+              <span>Carrera 36 #42-12</span>
+            </div>
+          </div>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/573000000000?text=Hola,%20me%20gustaría%20hacer%20un%20pedido%20en%20Origen%20Café" class="whatsapp-floating" target="_blank" rel="noopener noreferrer" aria-label="Hacer pedido por WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.59 1.978 14.12 .952 11.5 .952c-5.442 0-9.866 4.372-9.87 9.802 0 1.714.475 3.393 1.374 4.878l-.948 3.461 3.56-.933zM19.1 14.8c-.3-.15-1.74-.86-2.03-.96-.28-.1-.49-.15-.7.15-.2.3-.78.96-.96 1.16-.18.2-.36.23-.66.08-1.02-.5-1.8-1.07-2.5-2.28-.2-.3-.02-.47.13-.62.14-.14.3-.36.46-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.7-1.62-.95-2.24-.25-.61-.51-.53-.7-.54-.17-.01-.38-.01-.58-.01-.2 0-.53.07-.8.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.14 3.27 5.19 4.58.73.3 1.29.49 1.74.63.73.23 1.39.2 1.92.12.58-.08 1.74-.71 1.98-1.4.24-.7.24-1.3.17-1.4-.07-.1-.28-.2-.58-.35z"/>
-        </svg>
-    </a>
+          <a
+            href="https://maps.google.com/?q=Carrera+36+42-12+Bucaramanga+Santander+Colombia"
+            class="btn btn--map"
+            id="footer-cta-map"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir ubicación en Google Maps"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+            </svg>
+            Ver en Google Maps
+          </a>
+        </div>
 
-    <script src="script.js"></script>
+      </div><!-- /.footer-grid -->
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="current-year">2024</span> Origen Café · Bucaramanga, Colombia · Hecho con cuidado
+        </p>
+        <nav class="footer-legal-nav" aria-label="Navegación legal">
+          <a href="#" class="footer-legal-link">Política de privacidad</a>
+          <span aria-hidden="true">·</span>
+          <a href="#" class="footer-legal-link">Términos</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON
+  ============================================================ -->
+  <a
+    href="https://wa.me/573193517191?text=Hola,%20me%20gustar%C3%ADa%20hacer%20un%20pedido%20en%20Origen%20Caf%C3%A9"
+    class="whatsapp-fab"
+    id="whatsapp-fab"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar a Origen Café por WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" class="whatsapp-icon">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.128.558 4.124 1.532 5.854L.046 23.84l6.09-1.473A11.934 11.934 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 0 1-5.001-1.368l-.36-.214-3.716.898.947-3.62-.234-.373A9.802 9.802 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+    </svg>
+    <span class="whatsapp-tooltip">¡Hola! Pídenos aquí</span>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
